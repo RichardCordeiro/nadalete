@@ -1,7 +1,6 @@
 package edu.fatec.lp2.exercicio1;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class MsgAudio extends Mensagem {
 	private int duracao;
@@ -18,7 +17,7 @@ public class MsgAudio extends Mensagem {
 	@Override
 	public Mensagem sendMessage(String conteudo) {
 		setConteudo(conteudo);
-		setHoraEnvio(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+		setHoraEnvio(LocalDateTime.now());
 		return this;
 	}
 }

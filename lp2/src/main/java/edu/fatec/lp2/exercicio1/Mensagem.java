@@ -1,10 +1,10 @@
 package edu.fatec.lp2.exercicio1;
 
-
+import java.time.LocalDateTime;
 
 public abstract class Mensagem {
 	private Contatinho destinatario;
-	private String horaEnvio;
+	private LocalDateTime horaEnvio;
 	private String conteudo;
 
 	protected Mensagem(Contatinho destinatario) {
@@ -15,7 +15,7 @@ public abstract class Mensagem {
 		return destinatario;
 	}
 
-	public String getHoraEnvio() {
+	public LocalDateTime getHoraEnvio() {
 		return horaEnvio;
 	}
 
@@ -23,7 +23,7 @@ public abstract class Mensagem {
 		return conteudo;
 	}
 
-	protected void setHoraEnvio(String horaEnvio) {
+	protected void setHoraEnvio(LocalDateTime horaEnvio) {
 		this.horaEnvio = horaEnvio;
 	}
 

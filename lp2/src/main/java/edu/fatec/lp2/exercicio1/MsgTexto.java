@@ -1,7 +1,6 @@
 package edu.fatec.lp2.exercicio1;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class MsgTexto extends Mensagem {
     private int numChar;
@@ -17,7 +16,7 @@ public class MsgTexto extends Mensagem {
     @Override
     public Mensagem sendMessage(String conteudo) {
         setConteudo(conteudo);
-        setHoraEnvio(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        setHoraEnvio(LocalDateTime.now());
         this.numChar = conteudo == null ? 0 : conteudo.length();
         return this;
     }
